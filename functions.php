@@ -38,4 +38,9 @@ $types = array( 'post', 'page' );
   foreach( $types as $type )
       add_post_type_support( $type, 'unpublish' );
 
+add_filter( 'wp_mail_from_name', 'vortal_wp_mail_from_name' );
+function vortal_wp_mail_from_name( $email_from ){
+	return 'Команда Jerelia';
+}
+
 ?>
