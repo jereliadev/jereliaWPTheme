@@ -615,6 +615,8 @@ hr {
 }
 .container {
   position: relative;
+    padding-left:0;
+  padding-right:0;
 }
 
 .customizer-display-none {
@@ -1100,11 +1102,57 @@ color: #666;
   visibility: visible;
 }
 
-.bloc-fill-screen{
+/*.bloc-fill-screen{
 	padding-top: 0;
 	position: relative;
 	height: inherit;
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
-	background-size: auto;
+}*/
+
+.fill-screen{
+  width:100%;
+  clear:both;
+  background: 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  position:relative;
 }
+
+.bloc-fill-screen{
+  padding-top: 0;
+  width:100%;
+  clear:both;
+  background: 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  position:relative;
+}
+
+.fade-right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0, 0.9) 50%);
+    opacity: .5; 
+  }
+
+  .fade-left:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(0,0,0, 0.9) 50%);
+    opacity: .6; 
+  }
+
+  

@@ -22,6 +22,9 @@ function bst_child_enqueues() {
 
 	wp_enqueue_style('jerelia-css', get_template_directory_uri() . '/css/jerelia.css');
 
+	// Add Parsley
+	wp_enqueue_style('parsley-css', get_template_directory_uri() . '/css/parsley.css');
+
     // Add Google Fonts
     wp_enqueue_style( 'jerelia-font', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic');
 	
@@ -30,6 +33,9 @@ function bst_child_enqueues() {
 	// Add Parallax
 	wp_enqueue_script( 'paralax-scripts', get_template_directory_uri() . '/js/parallax.js');
 
+
+	wp_enqueue_script('parsley', get_template_directory_uri() . '/js/parsley.min.js');
+	wp_enqueue_script('parsley-uk', get_template_directory_uri() . '/js/i18n/uk.js');
 }
 add_action('wp_enqueue_scripts', 'bst_child_enqueues', 101);
 
@@ -42,5 +48,63 @@ add_filter( 'wp_mail_from_name', 'vortal_wp_mail_from_name' );
 function vortal_wp_mail_from_name( $email_from ){
 	return 'Команда Jerelia';
 }
+
+// Custom Role
+
+
+function add_theme_caps() {
+	// Get role Leader
+	$role = get_role( 'leader' );
+
+
+	if ( null !== $role ) {
+		// Role exist
+		$role->add_cap( 'edit_posts' ); 
+		$role->remove_cap( 'manage_options' );
+	}
+	else {
+		//Create Role
+	$createrole = add_role(
+	    'leader',
+	    __( 'Лидер' ),
+	    array(
+	        'read'         => true,  // true allows this capability
+	       	'edit_published_posts'   => true,
+			'edit_pages'   => true,
+	        'edit_published_pages'   => true,
+	       	'edit_theme_options'   => true,
+	       	'unfiltered_html'   => true,
+	       	'unfiltered_upload'   => true,
+	       	'upload_files'   => true,
+	    )
+	);
+	}
+
+}
+add_action( 'admin_init', 'add_theme_caps');
+
+// Hide Post Menu
+
+function custom_remove_menus(){
+
+    // Get current user's data
+    $current_user = wp_get_current_user();
+    $user_id = $current_user->ID;
+
+    // Check user's roles   
+    $user = new WP_User( $user_id );
+    if ( !empty( $user->roles ) && is_array( $user->roles ) ) {
+        if( in_array( 'leader', $user->roles ) ) {
+            // Remove menu items
+            remove_menu_page( 'edit.php' );
+        }
+    }
+}
+
+add_action( 'admin_menu', 'custom_remove_menus' );
+
+// test
+
+// update_option ( 'blogname', 'Тестовый лидер' );
 
 ?>

@@ -19,9 +19,13 @@
         require_once get_template_directory() . '/includes/customizer/panels/contacts.php';
 
 
-
    }
 add_action( 'customize_register', 'panel_register' );
+
+function set_custom_title() { 
+    $hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
+    return "Майстерня бізнесу " . $hero_title; }
+add_filter( 'pre_get_document_title', 'set_custom_title' );
 
 
 /**

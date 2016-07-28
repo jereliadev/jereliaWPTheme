@@ -4,18 +4,19 @@
  *
  *	@package WordPress
  *	@subpackage Jerelia
+ wp_get_attachment_image_src( absint( get_option( 'jerelia_team_general_image_1' ) 
  */
 ?>
 <?php
 $team_title = get_theme_mod( 'jerelia_team_general_title', __( '', 'jerelia' ) );
-$person_1_image = get_theme_mod( 'jerelia_team_general_image_1', esc_url( get_template_directory_uri() . '/layouts/images/person1.jpg' ) );
+$person_1_image = get_theme_mod('jerelia_team_general_image_1');
 $person_1_name = get_theme_mod( 'jerelia_team_general_name_1', __( 'Диана Морозова', 'jerelia' ) );
 $person_1_entry = get_theme_mod( 'jerelia_team_general_entry_1', __( 'Олена Філатова – це дійсно лідер, вона не просто зібрала команду, а поєднала абсолютно різних людей, надихнула їх на подолання перепон та досягнення спільної мети.', 'jerelia' ) );
-$person_2_image = get_theme_mod( 'jerelia_team_general_image_2', esc_url( get_template_directory_uri() . '/layouts/images/person2.jpg' ) );
+$person_2_image = get_theme_mod( 'jerelia_team_general_image_2');
 $person_2_name = get_theme_mod( 'jerelia_team_general_name_2', __( 'Микола Журавель', 'jerelia' ) );
 $person_2_entry = get_theme_mod( 'jerelia_team_general_entry_2', __( 'Олена Філатова унікальна, її я можу слухати годинами, і не лише тому, що вона красномовно говорить, а тому, що її промови дійсно змістовні, мудрі та актуальні.', 'jerelia' ) );
 $person_3_image = get_theme_mod( 'jerelia_team_general_image_3', esc_url( get_template_directory_uri() . '/layouts/images/person3.jpg' ) );
-$person_3_name = get_theme_mod( 'jerelia_team_general_name_3', __( 'Вероника Максимова', 'jerelia' ) );
+$person_3_name = get_theme_mod( 'jerelia_team_general_name_3');
 $person_3_entry = get_theme_mod( 'jerelia_team_general_entry_3', __( 'Раніше я не зустрічала людину, котра б змогла декількома словами мотивувати, надихнути, підтримати в непростій ситуації та направити в необхідну колію. Тепер я знаю таку людину – це Олена Філатова.', 'jerelia' ) );
 ?>
 
@@ -30,8 +31,7 @@ $person_3_entry = get_theme_mod( 'jerelia_team_general_entry_3', __( 'Раніш
 
 		<div class="row">
 			<div id="person_1" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center plr32">
-				
-				<img src="<?php if($person_1_image): echo esc_url( $person_1_image ); endif;?>" alt=" <?php if( $person_1_name ): echo sanitize_html( $person_1_name ); endif; ?>" title="<?php if( $person_1_name ): echo sanitize_html( $person_1_name ); endif; ?>">
+				<img src="<?php echo ($person_1_image ? wp_get_attachment_image_url(absint($person_1_image)) : esc_url( get_template_directory_uri() . '/layouts/images/person1.jpg' )); ?>" alt=" <?php if( $person_1_name ): echo sanitize_html( $person_1_name ); endif; ?>" title="<?php if( $person_1_name ): echo sanitize_html( $person_1_name ); endif; ?>">
 					<!--/.person-image-->
 				
 					<h5><?php if( $person_1_name ): echo sanitize_html( $person_1_name ); endif; ?></h5>
@@ -42,7 +42,7 @@ $person_3_entry = get_theme_mod( 'jerelia_team_general_entry_3', __( 'Раніш
 
 			<div id="person_2" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center plr32">
 				
-				<img src="<?php if($person_2_image): echo esc_url( $person_2_image ); endif;?>" alt=" <?php if( $person_2_name ): echo sanitize_html( $person_2_name ); endif; ?>" title="<?php if( $person_2_name ): echo sanitize_html( $person_2_name ); endif; ?>">
+				<img src="<?php echo ($person_2_image ? wp_get_attachment_image_url(absint($person_2_image)) : esc_url( get_template_directory_uri() . '/layouts/images/person2.jpg' )); ?>" alt=" <?php if( $person_2_name ): echo sanitize_html( $person_2_name ); endif; ?>" title="<?php if( $person_2_name ): echo sanitize_html( $person_2_name ); endif; ?>">
 					<!--/.person-image-->
 				
 					<h5><?php if( $person_2_name ): echo sanitize_html( $person_2_name ); endif; ?></h5>
@@ -52,8 +52,7 @@ $person_3_entry = get_theme_mod( 'jerelia_team_general_entry_3', __( 'Раніш
 			</div><!--/.col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1-->
 
 			<div id="person_3" class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center plr32">
-				
-				<img src="<?php if($person_3_image): echo esc_url( $person_3_image ); endif;?>" alt=" <?php if( $person_3_name ): echo sanitize_html( $person_3_name ); endif; ?>" title="<?php if( $person_3_name ): echo sanitize_html( $person_3_name ); endif; ?>">
+				<img src="<?php echo ($person_3_image ? wp_get_attachment_image_url(absint($person_3_image)) : esc_url( get_template_directory_uri() . '/layouts/images/person3.jpg' )); ?>" alt=" <?php if( $person_3_name ): echo sanitize_html( $person_3_name ); endif; ?>" title="<?php if( $person_3_name ): echo sanitize_html( $person_3_name ); endif; ?>">
 					<!--/.person-image-->
 				
 					<h5><?php if( $person_3_name ): echo sanitize_html( $person_3_name ); endif; ?></h5>

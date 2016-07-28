@@ -7,11 +7,13 @@
  */
 ?>
 <?php
-$callback_image = get_theme_mod( 'jerelia_callback_general_image', esc_url( get_template_directory_uri() . '/layouts/images/callback-image.jpg' ) );
+$callback_fade = get_theme_mod( 'jerelia_callback_general_fade', 1 );
+$callback_image = get_theme_mod('jerelia_callback_general_image');
 $hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
 $callback_entry = get_theme_mod( 'jerelia_callback_general_entry', __( 'Є речі які я не розповідаю на сайті, такі собі секрети мого бізнесу. Підписуйся, щоб дізнатісь більше!', 'jerelia' ) );
 ?>
-<section id="callback" class="callback" style="background-image: url('<?php echo esc_url( $callback_image ); ?>')">
+<!-- <section id="callback" class="callback" style="background: url('<?php echo esc_url( $callback_image ); ?>')"> -->
+<section id="callback" class="callback fill-screen <?php  if($callback_fade == 1 ): echo "fade-left"; endif; ?>" style="background: url('<?php echo ($callback_image ? wp_get_attachment_image_url(absint($callback_image),'full') : esc_url( get_template_directory_uri() . '/layouts/images/callback-image.jpg' )); ?>')">
 <div class="container">
 		<div class="row">
 		<div class="col-md-6 col-sm-6 mb-xs-24 pull-left">
@@ -27,9 +29,9 @@ $callback_entry = get_theme_mod( 'jerelia_callback_general_entry', __( 'Є ре�
 } ?> 
 
 		<div class="row">
-				<form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post" novalidate="novalidate">
-                    	<div class="col-sm-5"><input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я"></div>
-                    	<div class="col-sm-5"><input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail"></div>
+				<form data-parsley-validate action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
+                    	<div class="col-sm-5"><input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я" required=""></div>
+                    	<div class="col-sm-5"><input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail" required="" data-parsley-trigger="change" data-parsley-type="email"></div>
                     	<div class="col-sm-2"><input name="cf-submitted-c" type="submit" value="відправити" size="40"></div>
                     	</form>
 
