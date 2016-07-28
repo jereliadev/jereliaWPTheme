@@ -21,6 +21,7 @@
 	wp.customize( 'jerelia_hero_general_title', function( value ) {
 		value.bind( function( newval ) {
 			$( '#header mark' ).html( newval );
+			$( '#header a.navbar-brand' ).html( "Майстерня бізнесу " + newval );
 		} );
 	} );
 

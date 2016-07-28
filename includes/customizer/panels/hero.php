@@ -30,6 +30,23 @@ $wp_customize->add_control(
     )
 );
 
+// Fade
+$wp_customize->add_setting( 'jerelia_hero_general_fade',
+    array(
+        'sanitize_callback' => 'jerelia_sanitize_checkbox',
+        'default'           => 1,
+        'transport'         => 'refresh'
+    )
+);
+$wp_customize->add_control('jerelia_hero_general_fade',
+    array(
+        'type'      => 'checkbox',
+        'label'     => __( 'Затемнення зображення', 'jerelia' ),
+        'section'   => 'jerelia_panel_hero',
+        'priority'  => 2
+    )
+);
+
 // Title
 $wp_customize->add_setting( 'jerelia_hero_general_title',
     array(
@@ -44,7 +61,7 @@ $wp_customize->add_control(
         'label'         => __( 'Лідер', 'jerelia' ),
         'description'   => __( 'Введіть ім’я та призвище в орудному відмінку.', 'jerelia'),
         'section'       => 'jerelia_panel_hero' ,
-        'priority'      => 2
+        'priority'      => 3
     )
 );
 
@@ -61,7 +78,7 @@ $wp_customize->add_control( 'jerelia_hero_general_entry',
         'label'         => __( 'Заклик', 'jerelia' ),
         'description'   => __( 'Введіть заклик над формою зв’язку.', 'jerelia'),
         'section'       => 'jerelia_panel_hero' ,
-        'priority'      => 3,
+        'priority'      => 4,
         'type'          => 'textarea'
     )
 );

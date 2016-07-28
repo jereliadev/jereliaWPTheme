@@ -71,22 +71,25 @@ $wp_customize->add_control('jerelia_team_general_title',
 // Image
 $wp_customize->add_setting( 'jerelia_team_general_image_1',
     array(
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'absint',
         'default'           => esc_url( get_template_directory_uri() . '/layouts/images/person1.jpg' ),
-        'transport'         => 'postMessage'
+        'transport'         => 'refresh'
     )
 );
 
 $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize, 'jerelia_team_general_image_1',
-        array(
-            'label'     => __( 'Зображення', 'jerelia' ),
-            'section'   => 'jerelia_panel_team_1',
-            'settings'  => 'jerelia_team_general_image_1',
-            'priority'  => 1
+        new WP_Customize_Cropped_Image_Control($wp_customize, 'jerelia_team_general_image_1',
+                array(
+                    'label'       => __( 'Зображення', 'jerelia' ),
+                    'section'     => 'jerelia_panel_team_1',
+                    'settings'  => 'jerelia_team_general_image_1',
+                    'flex_width'  => false,
+                    'flex_height' => false,
+                    'width'       => 125,
+                    'height'      => 125,
+                )
         )
-    )
-);
+    );
 
 // Name
 $wp_customize->add_setting( 'jerelia_team_general_name_1',
@@ -134,22 +137,25 @@ $wp_customize->add_control( 'jerelia_team_general_entry_1',
 // Image
 $wp_customize->add_setting( 'jerelia_team_general_image_2',
     array(
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'absint',
         'default'           => esc_url( get_template_directory_uri() . '/layouts/images/person2.jpg' ),
-        'transport'         => 'postMessage'
+        'transport'         => 'refresh'
     )
 );
 
 $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize, 'jerelia_team_general_image_2',
-        array(
-            'label'     => __( 'Зображення', 'jerelia' ),
-            'section'   => 'jerelia_panel_team_2',
-            'settings'  => 'jerelia_team_general_image_2',
-            'priority'  => 1
+        new WP_Customize_Cropped_Image_Control($wp_customize, 'jerelia_team_general_image_2',
+                array(
+                    'label'       => __( 'Зображення', 'jerelia' ),
+                    'section'     => 'jerelia_panel_team_2',
+                    'settings'  => 'jerelia_team_general_image_2',
+                    'flex_width'  => false,
+                    'flex_height' => false,
+                    'width'       => 125,
+                    'height'      => 125,
+                )
         )
-    )
-);
+    );
 
 // Name
 $wp_customize->add_setting( 'jerelia_team_general_name_2',
@@ -197,23 +203,25 @@ $wp_customize->add_control( 'jerelia_team_general_entry_2',
 // Image
 $wp_customize->add_setting( 'jerelia_team_general_image_3',
     array(
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'absint',
         'default'           => esc_url( get_template_directory_uri() . '/layouts/images/person3.jpg' ),
-        'transport'         => 'postMessage'
+        'transport'         => 'refresh'
     )
 );
 
 $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize, 'jerelia_team_general_image_3',
-        array(
-            'label'     => __( 'Зображення', 'jerelia' ),
-            'section'   => 'jerelia_panel_team_3',
-            'settings'  => 'jerelia_team_general_image_3',
-            'priority'  => 1
+        new WP_Customize_Cropped_Image_Control($wp_customize, 'jerelia_team_general_image_3',
+                array(
+                    'label'       => __( 'Зображення', 'jerelia' ),
+                    'section'     => 'jerelia_panel_team_3',
+                    'settings'  => 'jerelia_team_general_image_3',
+                    'flex_width'  => false,
+                    'flex_height' => false,
+                    'width'       => 125,
+                    'height'      => 125,
+                )
         )
-    )
-);
-
+    );
 // Name
 $wp_customize->add_setting( 'jerelia_team_general_name_3',
     array(

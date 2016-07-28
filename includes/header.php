@@ -1,10 +1,12 @@
 <?php
 $hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_template_directory_uri() . '/layouts/images/front-page-header.jpg' ) );
+$hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
+$hero_fade = get_theme_mod( 'jerelia_hero_general_fade', 1 );
 ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-	<title><?php wp_title('•', true, 'right'); bloginfo('name'); ?></title>
+<title><?php echo wp_get_document_title(); ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +20,7 @@ $hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_
 	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 </div>
 <![endif]-->
-<header id="header" class='bloc-fill-screen' style="background-image: url('<?php echo esc_url( $hero_general_image ); ?>')">
+<header id="header" class='bloc-fill-screen <?php  if($hero_fade == 1 ): echo "fade-right"; endif; ?>' style="background: url('<?php echo esc_url( $hero_general_image ); ?>')">
 <nav class="navbar navbar-static-top">
   <div class="container">
     <div class="navbar-header">
@@ -28,7 +30,7 @@ $hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php echo "Майстерня бізнесу " . $hero_title; ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
         <?php

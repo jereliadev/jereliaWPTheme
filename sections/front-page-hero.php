@@ -21,11 +21,10 @@ $hero_entry = get_theme_mod( 'jerelia_hero_general_entry', __( 'Обмежени
 <?php if(function_exists('hero_mail')){
     hero_mail();
 } ?>
-						<form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post" novalidate="novalidate">
-<input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я">
-                    	<input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail">
-<!-- 	    <input type="hidden" name="cf-submitted" value="1"> -->
-	<input type="submit" name="cf-submitted-h" value="відправити" size="40">
+						<form data-parsley-validate action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
+						<input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я" required="">
+                    	<input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail" required="" data-parsley-trigger="change" data-parsley-type="email">
+						<input type="submit" name="cf-submitted-h" value="відправити" size="40">
                     	</form>
 					</div><!--/.col-sm-6-->
 		</div><!--/.row-->
