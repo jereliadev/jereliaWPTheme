@@ -23,26 +23,35 @@ $hero_fade = get_theme_mod( 'jerelia_hero_general_fade', 1 );
 <header id="header" class='bloc-fill-screen <?php  if($hero_fade == 1 ): echo "fade-right"; endif; ?>' style="background: url('<?php echo esc_url( $hero_general_image ); ?>')">
 <nav class="navbar navbar-static-top">
   <div class="container">
+        <div class="row">
+     
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php echo "Майстерня бізнесу " . $hero_title; ?></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
+                          <button type="button" class="widget-handle mobile-toggle visible-sm visible-xs navbar-toggle" data-toggle="collapse" data-target=".navbar-menu-collapse">
+                                <i class="fa fa-bars"></i>
+                                <span class="sr-only">Toggle navigation</span>
+                          </button>
+          
+<a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php echo "Майстерня бізнесу " . $hero_title; ?></a>
+
+</div>
+          
+
+<!--     <div class="collapse navbar-collapse" id="navbar"> -->
         <?php
             wp_nav_menu( array(
                 'theme_location'    => 'navbar-right',
                 'depth'             => 2,
-                'menu_class'        => 'nav navbar-nav navbar-right',
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse navbar-menu-collapse',
+                'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-    </div><!-- /.navbar-collapse -->
+<!--     </div> --><!-- /.navbar-collapse -->
+
+
+    </div>
   </div><!-- /.container -->
 </nav>
 <?php get_template_part( 'sections/front-page', 'hero' ); ?>

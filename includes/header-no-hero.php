@@ -1,10 +1,12 @@
 <?php
 $hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_template_directory_uri() . '/layouts/images/front-page-header.jpg' ) );
+$hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
+$hero_fade = get_theme_mod( 'jerelia_hero_general_fade', 1 );
 ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-<title><?php echo wp_get_document_title(); ?></title>
+	<title><?php wp_title('•', true, 'right'); bloginfo('name'); ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,26 +23,35 @@ $hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_
 <header id="header">
 <nav class="navbar navbar-static-top">
   <div class="container">
+        <div class="row">
+     
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
+                          <button type="button" class="widget-handle mobile-toggle visible-sm visible-xs navbar-toggle" data-toggle="collapse" data-target=".navbar-menu-collapse">
+                                <i class="fa fa-bars"></i>
+                                <span class="sr-only">Toggle navigation</span>
+                          </button>
+          
+<a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php echo "Майстерня бізнесу " . $hero_title; ?></a>
+
+</div>
+          
+
+<!--     <div class="collapse navbar-collapse" id="navbar"> -->
         <?php
             wp_nav_menu( array(
                 'theme_location'    => 'navbar-right',
                 'depth'             => 2,
-                'menu_class'        => 'nav navbar-nav navbar-right',
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse navbar-menu-collapse',
+                'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-    </div><!-- /.navbar-collapse -->
+<!--     </div> --><!-- /.navbar-collapse -->
+
+
+    </div>
   </div><!-- /.container -->
 </nav>
 </header>

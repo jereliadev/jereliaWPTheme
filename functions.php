@@ -25,6 +25,9 @@ function bst_child_enqueues() {
 	// Add Parsley
 	wp_enqueue_style('parsley-css', get_template_directory_uri() . '/css/parsley.css');
 
+	// Add Font Awesome stylesheet
+    wp_enqueue_style( 'fa-icons', get_template_directory_uri().'/css/font-awesome.min.css' );
+
     // Add Google Fonts
     wp_enqueue_style( 'jerelia-font', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic');
 	
@@ -60,6 +63,9 @@ function add_theme_caps() {
 	if ( null !== $role ) {
 		// Role exist
 		$role->add_cap( 'edit_posts' ); 
+		$role->add_cap( 'delete_posts' ); 
+		$role->add_cap( 'delete_others_posts' ); 
+		$role->add_cap( 'delete_published_posts' ); 
 		$role->remove_cap( 'manage_options' );
 	}
 	else {
@@ -69,7 +75,10 @@ function add_theme_caps() {
 	    __( 'Лидер' ),
 	    array(
 	        'read'         => true,  // true allows this capability
+	       	'edit_posts'   => true,
 	       	'edit_published_posts'   => true,
+	       	'delete_posts'   => true,
+	       	'delete_others_posts'   => true,
 			'edit_pages'   => true,
 	        'edit_published_pages'   => true,
 	       	'edit_theme_options'   => true,

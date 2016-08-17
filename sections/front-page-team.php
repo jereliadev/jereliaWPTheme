@@ -15,8 +15,8 @@ $person_1_entry = get_theme_mod( 'jerelia_team_general_entry_1', __( 'Олена
 $person_2_image = get_theme_mod( 'jerelia_team_general_image_2');
 $person_2_name = get_theme_mod( 'jerelia_team_general_name_2', __( 'Микола Журавель', 'jerelia' ) );
 $person_2_entry = get_theme_mod( 'jerelia_team_general_entry_2', __( 'Олена Філатова унікальна, її я можу слухати годинами, і не лише тому, що вона красномовно говорить, а тому, що її промови дійсно змістовні, мудрі та актуальні.', 'jerelia' ) );
-$person_3_image = get_theme_mod( 'jerelia_team_general_image_3', esc_url( get_template_directory_uri() . '/layouts/images/person3.jpg' ) );
-$person_3_name = get_theme_mod( 'jerelia_team_general_name_3');
+$person_2_image = get_theme_mod( 'jerelia_team_general_image_3');
+$person_3_name = get_theme_mod( 'jerelia_team_general_name_3', __( 'Вероника Максимова', 'jerelia' ) );
 $person_3_entry = get_theme_mod( 'jerelia_team_general_entry_3', __( 'Раніше я не зустрічала людину, котра б змогла декількома словами мотивувати, надихнути, підтримати в непростій ситуації та направити в необхідну колію. Тепер я знаю таку людину – це Олена Філатова.', 'jerelia' ) );
 ?>
 
