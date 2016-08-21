@@ -688,6 +688,11 @@ footer {
 
 }
 
+#about-jerelia h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 #about-jerelia h4 span {
   font-weight: 600;
 }

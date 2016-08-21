@@ -80,12 +80,6 @@
 	} );
 
 //----- 1
-wp.customize( 'jerelia_team_general_image_1', function( value ) {
-		value.bind( function( newval ) {
-				console.log( newval );
-				$( '#person_1 img' ).attr( 'src', newval );
-		} );
-	} );
 
 
 	wp.customize( 'jerelia_team_general_name_1', function( value ) {
@@ -101,13 +95,6 @@ wp.customize( 'jerelia_team_general_image_1', function( value ) {
 	} );
 
 //----- 2
-wp.customize( 'jerelia_team_general_image_2', function( value ) {
-		value.bind( function( newval ) {
-				console.log( newval );
-				$( '#person_2 img' ).attr( 'src', newval );
-		} );
-	} );
-
 
 	wp.customize( 'jerelia_team_general_name_2', function( value ) {
 		value.bind( function( newval ) {
@@ -122,12 +109,6 @@ wp.customize( 'jerelia_team_general_image_2', function( value ) {
 	} );
 
 //----- 3
-wp.customize( 'jerelia_team_general_image_3', function( value ) {
-		value.bind( function( newval ) {
-				console.log( newval );
-				$( '#person_3 img' ).attr( 'src', newval );
-		} );
-	} );
 
 
 	wp.customize( 'jerelia_team_general_name_3', function( value ) {

@@ -39,7 +39,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'jerelia_callback_general_fade',
     array(
         'sanitize_callback' => 'jerelia_sanitize_checkbox',
-        'default'           => 1,
+        'default'           => 0,
         'transport'         => 'refresh'
     )
 );

@@ -112,8 +112,4 @@ function custom_remove_menus(){
 
 add_action( 'admin_menu', 'custom_remove_menus' );
 
-// test
-
-// update_option ( 'blogname', 'Тестовый лидер' );
-
 ?>

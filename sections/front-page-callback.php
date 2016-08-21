@@ -7,7 +7,7 @@
  */
 ?>
 <?php
-$callback_fade = get_theme_mod( 'jerelia_callback_general_fade', 1 );
+$callback_fade = get_theme_mod( 'jerelia_callback_general_fade', 0 );
 $callback_image = get_theme_mod('jerelia_callback_general_image');
 $hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
 $callback_entry = get_theme_mod( 'jerelia_callback_general_entry', __( 'Є речі які я не розповідаю на сайті, такі собі секрети мого бізнесу. Підписуйся, щоб дізнатісь більше!', 'jerelia' ) );
