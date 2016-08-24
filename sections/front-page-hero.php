@@ -24,6 +24,7 @@ $hero_entry = get_theme_mod( 'jerelia_hero_general_entry', __( 'Обмежени
 						<form data-parsley-validate action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
 						<input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я" required="">
                     	<input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail" required="" data-parsley-trigger="change" data-parsley-type="email">
+                    	<input type="tel" name="cf-tel" value="<?php if(isset($_POST['cf-tel']))  echo $_POST['cf-tel'];?>"  size="40" placeholder="Телефон" required="" data-parsley-trigger="change" data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$">
 						<input type="submit" name="cf-submitted-h" value="відправити" size="40">
                     	</form>
 					</div><!--/.col-sm-6-->

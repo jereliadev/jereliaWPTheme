@@ -30,9 +30,10 @@ $callback_entry = get_theme_mod( 'jerelia_callback_general_entry', __( 'Є ре�
 
 		<div class="row">
 				<form data-parsley-validate action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
-                    	<div class="col-sm-5"><input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я" required=""></div>
-                    	<div class="col-sm-5"><input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail" required="" data-parsley-trigger="change" data-parsley-type="email"></div>
-                    	<div class="col-sm-2"><input name="cf-submitted-c" type="submit" value="відправити" size="40"></div>
+                    	<div class="col-sm-3"><input type="text" name="cf-name" value="<?php if(isset($_POST['cf-name']))  echo $_POST['cf-name'];?>" size="40" placeholder="Ім'я" required=""></div>
+                    	<div class="col-sm-3"><input type="email" name="cf-email" value="<?php if(isset($_POST['cf-email']))  echo $_POST['cf-email'];?>"  size="40" placeholder="E-mail" required="" data-parsley-trigger="change" data-parsley-type="email"></div>
+                    	<div class="col-sm-3"><input type="tel" name="cf-tel" value="<?php if(isset($_POST['cf-tel']))  echo $_POST['cf-tel'];?>"  size="40" placeholder="Телефон" required="" data-parsley-trigger="change" data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$"></div>
+                    	<div class="col-sm-3"><input name="cf-submitted-c" type="submit" value="відправити" size="40"></div>
                     	</form>
 
 		</div><!--/.row-->

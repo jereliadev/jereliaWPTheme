@@ -911,28 +911,28 @@ textarea:focus {
 
 ::-webkit-input-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.9);
+  color: rgba(0,0,0, 0.4);
   font-size: 18px;
 }
 :-moz-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.9);
+  color: rgba(0,0,0, 0.4);
   font-size: 18px;
 }
 ::-moz-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.9);
+  color: rgba(0,0,0, 0.4);
   font-size: 18px;
 }
 :-ms-input-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.9);
+  color: rgba(0,0,0, 0.4);
   font-size: 18px;
 }
-input::-webkit-input-placeholder       {opacity: 0.9; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 0.9; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 0.9; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 0.9; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder       {opacity: 0.4; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 0.4; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 0.4; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 0.4; transition: opacity 0.3s ease;}
 input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
