@@ -7,6 +7,11 @@
  */
 
 ?>
+
+<?php
+$leader_field_id = get_theme_mod( 'leader_field_id', __( '1111111' ) );
+?>
+
 <section id="company" class="parallax-window" data-parallax="scroll" data-image-src="<?php echo esc_url( get_template_directory_uri() . '/layouts/images/jerelia-company.jpg' );?>">
 	<div class="container"">
 										<div class="row">
@@ -51,7 +56,7 @@
 													Стань заможним у заможній країні!<br /> Готовий?
 												</h3>
 												<div>
-													<a href="#" class="btn btn-white btn-xlg" >вперед!</a>
+													<a href="http://jerelia.com/uk-ua/account/register/<?php if( $leader_field_id ): echo sanitize_html( $leader_field_id ); endif; ?>" class="btn btn-white btn-xlg" >вперед!</a>
 												</div>
 											</div>
 										</div>

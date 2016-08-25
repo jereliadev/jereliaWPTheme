@@ -39,7 +39,7 @@ $wp_customize->add_control(
     'leader_field_id',
     array(
         'label'         => __( 'Jerelia ID', 'jerelia' ),
-        'description'   => __( 'наприклад 111111', 'jerelia'),
+        'description'   => __( 'наприклад 1111111', 'jerelia'),
         'section'       => 'jerelia_contact_section' ,
         'priority'      => 2
     )
