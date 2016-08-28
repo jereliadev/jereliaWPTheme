@@ -23,7 +23,7 @@ $social_general_show = get_theme_mod( 'jerelia_social_general_show', 1 );
 
 
 		<?php  if( $social_general_show == 1 ) { ?>
-            <div class="col-md-5 col-sm-5 mb-xs-24"><?php
+            <div class="col-md-5 col-sm-5 mb-xs-24 text-center"><?php
             }
             else { ?>
                  <div class="col-md-7 col-md-offset-1 col-sm-6 col-sm-offset-1 text-center"><?php

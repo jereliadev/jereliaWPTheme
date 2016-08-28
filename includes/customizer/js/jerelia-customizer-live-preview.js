@@ -20,8 +20,14 @@
 
 	wp.customize( 'jerelia_hero_general_title', function( value ) {
 		value.bind( function( newval ) {
-			$( '#header mark' ).html( newval );
+			$( '#header mark.hero-title' ).html( newval );
 			$( '#header a.navbar-brand' ).html( "Майстерня бізнесу " + newval );
+		} );
+	} );
+
+	wp.customize( 'jerelia_hero_general_call', function( value ) {
+		value.bind( function( newval ) {
+			$( '#header mark.hero-call' ).html( newval );
 		} );
 	} );
 

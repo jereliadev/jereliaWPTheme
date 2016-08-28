@@ -23,11 +23,11 @@ $social_button_linkVK = get_theme_mod( 'jerelia_social_general_linkVK', __( '899
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-page" data-href="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>">Джерелія/Jerelia</a></blockquote></div><?php
+<div class="fb-page" data-href="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?php echo sanitize_html( $social_button_linkFB ); ?>">Джерелія/Jerelia</a></blockquote></div><?php
 } ?>
 
 <?php if( $social_button_linkVK ){ ?>

@@ -457,6 +457,11 @@ a:hover, a:active {
   padding: .1em .4em; 
 }
 
+.hero h5 mark, .callback h5 mark{
+  background: #fff;
+  color: #00a0af;
+  padding: .1em .4em; 
+}
 
 .hero p, .callback p {
   color: #ffffff;
@@ -473,6 +478,10 @@ a:hover, a:active {
   color: #00d7eb;
 }
 
+.hero img {
+    max-width: 300px !important;
+    height: auto;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -856,6 +865,9 @@ input[type="submit"]:hover {
     opacity: .6; 
   }
 
+  .fade-right:after, .fade-left:after {
+  clear: both;
+  }
 
 .image-small {
   max-height: 80px;
@@ -911,28 +923,28 @@ textarea:focus {
 
 ::-webkit-input-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.4);
+  color: rgba(0,0,0, 0.7) !important;
   font-size: 18px;
 }
 :-moz-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.4);
+  color: rgba(0,0,0, 0.7) !important;
   font-size: 18px;
 }
 ::-moz-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.4);
+  color: rgba(0,0,0, 0.7) !important;
   font-size: 18px;
 }
 :-ms-input-placeholder {
   /*text-transform: uppercase;*/
-  color: rgba(0,0,0, 0.4);
+  color: rgba(0,0,0, 0.7) !important;
   font-size: 18px;
 }
-input::-webkit-input-placeholder       {opacity: 0.4; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 0.4; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 0.4; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 0.4; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder       {opacity: 0.7; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 0.7; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 0.7; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 0.7; transition: opacity 0.3s ease;}
 input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
@@ -1093,7 +1105,9 @@ input[type="submit"]:focus {
     opacity: .6; 
   }
 
-
+  .fade-right:after, .fade-left:after {
+  clear: both;
+  }
 
 }
 
