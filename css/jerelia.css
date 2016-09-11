@@ -654,6 +654,7 @@ section {
   padding: 96px 0;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .parallax-section {
@@ -1048,75 +1049,6 @@ input[type="submit"]:focus {
   }
 }
 
-/* 17. Responsive */
-@media only screen and (max-width: 767px) {
-   
-   section {
-    padding: 36px 5px;
- }
-
-  .hero h2, .callback h2 {
-    font-size: 30px;
-    text-align: center;
-  }
-
-  .hero {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-
- h3, h4, p {
-  text-align: center;
- }
-  .btn {
-  display:block;
-  text-align:center;
-  }
-
-  ul {
-  font-size: 12px;
-  }
-
-
-.mb64 {
-  margin-bottom: 32px;
-}
-
-.fade-right:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0, 0.9) 50%);
-    opacity: .5; 
-  }
-
-  .fade-left:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0, 0.9) 50%);
-    opacity: .6; 
-  }
-
-  .fade-right:after, .fade-left:after {
-  clear: both;
-  }
-
-}
-
-@media only screen and (max-width: 320px) {
-  .hero h2 {
-    font-size: 24px;
-  }
-}
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1127,6 +1059,7 @@ nav {
   max-width: 100%;
   margin-bottom: 0px !important;
 }
+
 
 .navbar-brand, .navbar-brand:visited {
 float: left;
@@ -1233,6 +1166,7 @@ color: #666;
   visibility: visible;
 }
 
+
 .mobile-toggle i {
     line-height: 53px !important;
       font-size: 20px;
@@ -1268,6 +1202,75 @@ color: #666;
   padding: 0;
 }
 
+
+/* 17. Responsive */
+@media only screen and (max-width: 767px) {
+   
+   section {
+    padding: 36px 5px;
+ }
+
+  .hero h2, .callback h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+
+ h3, h4, p {
+  text-align: center;
+ }
+  .btn {
+  display:block;
+  text-align:center;
+  }
+
+  ul {
+  font-size: 12px;
+  }
+
+
+.mb64 {
+  margin-bottom: 32px;
 }
+
+.fade-right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0, 0.9) 50%);
+    opacity: .5; 
+  }
+
+  .fade-left:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0, 0.9) 50%);
+    opacity: .6; 
+  }
+
+  .fade-right:after, .fade-left:after {
+  clear: both;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+}
+
 
   

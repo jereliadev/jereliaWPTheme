@@ -112,4 +112,13 @@ function custom_remove_menus(){
 
 add_action( 'admin_menu', 'custom_remove_menus' );
 
+// Embed Responsive Videos 
+
+
+add_filter('embed_oembed_html', 'custom_youtube_settings', 99, 4);
+function custom_youtube_settings($cache, $url, $attr, $post_id) {
+return '<div class="embed-responsive embed-responsive-16by9">' . $cache . '</div>';
+}
+
+
 ?>

@@ -26,7 +26,7 @@ $social_general_show = get_theme_mod( 'jerelia_social_general_show', 1 );
             <div class="col-md-5 col-sm-5 mb-xs-24 text-center"><?php
             }
             else { ?>
-                 <div class="col-md-7 col-md-offset-1 col-sm-6 col-sm-offset-1 text-center"><?php
+                 <div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1 text-center"><?php
             } ?>
 
 			<img class="cast-shadow about-image" src="<?php if($about_image): echo esc_url( $about_image ); endif;?>">
@@ -35,7 +35,6 @@ $social_general_show = get_theme_mod( 'jerelia_social_general_show', 1 );
  <!-- Get Social -->
  <?php  if( $social_general_show == 1 ): get_template_part( 'sections/front-page', 'social' ); endif; ?>
 			
-
 
 		</div><!--/.row-->
 	</div><!--/.container-->

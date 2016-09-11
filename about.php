@@ -31,3 +31,4 @@
 </div><!-- /.container -->
 </section>
 <?php get_template_part( 'sections/front-page', 'callback' ); ?>
+<?php get_template_part('includes/footer'); ?>

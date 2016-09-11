@@ -1,12 +1,10 @@
 <?php
-$hero_general_image = get_theme_mod( 'jerelia_hero_general_image', esc_url( get_template_directory_uri() . '/layouts/images/front-page-header.jpg' ) );
 $hero_title = get_theme_mod( 'jerelia_hero_general_title', __( 'Лидер Jerelia', 'jerelia' ) );
-$hero_fade = get_theme_mod( 'jerelia_hero_general_fade', 1 );
 ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-	<title><?php wp_title('•', true, 'right'); bloginfo('name'); ?></title>
+<title><?php echo wp_get_document_title(); ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
